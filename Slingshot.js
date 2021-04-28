@@ -20,10 +20,7 @@ class Slingshot{
 
     }
     display(){
-        if(this.sling.bodyA)  {
-
-
-        
+        if(this.sling.bodyA){
         var pointA = this.sling.bodyA.position;
         var pointB = this.pointB;
         strokeWeight(4);

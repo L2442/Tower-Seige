@@ -21,7 +21,7 @@ function setup() {
 
   polygon = new Polygon(150,200,30,30);
 
-  launcher = new Slingshot(polygon.body,{x:150, y:110})
+  launcher = new Slingshot(polygon.body,{x:150, y:110});
   
   
   block1 = new Block(480,275,30,40);
@@ -50,9 +50,6 @@ function setup() {
   b7 = new Block(840,355,30,40);
   b8 = new Block(930,355,30,40);
   b9 = new Block(960,355,30,40);
-  
-
-
 }
 
 function draw() {
@@ -95,24 +92,20 @@ function draw() {
   polygon.display();
 
   launcher.display();
-  drawSprites();
+  //drawSprites();
 }
 
-function mouseDragged()  {
-  Matter.Body.setPosition(polygon.body,{x: mouseX, y: mouseY})
+function mouseDragged(){
+  Matter.Body.setPosition(polygon.body,{x: mouseX, y: mouseY});
 }
 
-function mouseReleased()  {
-  launcher.fly()
-  
-
+function mouseReleased(){
+  launcher.fly();
 }
 
-function keyPressed()  {
-  if(keyCode===32)  {
-    Matter.Body.setPosition(polygon.body,{x:150, y:200})
+function keyPressed(){
+  if(keyCode===32){
+    Matter.Body.setPosition(polygon.body,{x:150, y:200});
     launcher.attach(polygon.body);
-
-  }
-
+}
 }
